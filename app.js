@@ -4,7 +4,15 @@ const userRoutes = require("./Routers/user");
 const productRoutes = require("./Routers/product");
 const cartRoutes = require("./Routers/cart");
 const app = express();
+const cors = require("cors");
 require("dotenv").config();
+
+// app.use(cors({
+//   origin: 'http://localhost:3000', // Allow requests from localhost:3000
+
+// }));
+
+app.use(cors());
 
 const PORT = process.env.PORT || 8080;
 
