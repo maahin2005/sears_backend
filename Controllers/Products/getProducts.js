@@ -2,7 +2,7 @@ const ProductModel = require("../../Models/Products");
 
 const getProducts = async (req, res) => {
   try {
-    const products = await ProductModel.find();
+    const products = await ProductModel.find(req.query);
 
     res.json({ products });
   } catch (error) {
